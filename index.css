@@ -1,0 +1,48 @@
+:root {
+  --color-primary: rgba(160, 144, 144, 0.333);
+  --color-secondary: rgb(213, 213, 41);
+  --speed: 550ms;
+  --speed-lazy: 880ms;
+  --speed-lazy-super: 1200ms;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: var(--color-secondary);
+  padding: 1em 0;
+}
+
+div {
+  padding: 30px;
+}
+
+p {
+  font-style: italic;
+  line-height: 2.5rem;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+  width: 70%;
+  height: auto;
+  opacity: 0;
+  transform: translateX(70%);
+  transition: transform var(--speed-lazy) ease,
+    opacity var(--speed-lazy-super) ease;
+}
+
+/* lazy-fade-in animation */
+.fade-in {
+  transform: translateX(0);
+  opacity: 1;
+}
